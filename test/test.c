@@ -63,8 +63,7 @@ static void _mc_rundefer(void (^*cb)(void)) { (*cb)(); }
 #define auto __auto_type
 
 
-// auto main = ^(int argc, const char *argv[]) {
-int main(int argc, const char *argv[])
+auto main = ^(int argc, const char *argv[])
 {
     String *s1 = str("Hello");
     __builtin_dump_struct(s1, &printf);
